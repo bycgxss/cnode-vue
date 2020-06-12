@@ -1,14 +1,16 @@
 <template>
   <div class="header">
-    <img src="../assets/cnodejs_light.svg" alt="">
-    <ul>
-      <li><a href="#">首页</a></li>
-      <li><a href="#">新手入门</a></li>
-      <li><a href="#">API</a></li>
-      <li><a href="#">关于</a></li>
-      <li><a href="#">注册</a></li>
-      <li><a href="#">登陆</a></li>
-    </ul>
+    <router-link  :to="{name:'root'}">
+      <img src="../assets/cnodejs_light.svg" alt="">
+    </router-link>
+<!--    <ul>-->
+<!--      <li><a href="/">首页</a></li>-->
+<!--      <li><a href="#">新手入门</a></li>-->
+<!--      <li><a href="#">API</a></li>-->
+<!--      <li><a href="#">关于</a></li>-->
+<!--      <li><a href="#">注册</a></li>-->
+<!--      <li><a href="#">登录</a></li>-->
+<!--    </ul>-->
   </div>
 </template>
 
@@ -22,11 +24,18 @@
   .header{
     background-color:#5a5555 ;
     height: 50px;
+    position: relative;
   }
   img{
     max-width: 120px;
-    margin-left: 50px;
-    margin-top: 10px;
+    /*margin-left: 50px;*/
+    /*margin-top: 10px;*/
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
   }
   ul{
     list-style: none;
